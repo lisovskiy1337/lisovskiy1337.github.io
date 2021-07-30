@@ -23,16 +23,18 @@
 @import '../modules/modules';
 /* END MAIN STYLES */
 
-html {}
 
 body {
     font-family: 'Roboto', sans-serif;
     color: #000;
     font-size: 14px;
     width: 100%;
-    overflow-x: hidden;
+    
     min-height: 100%;
 
+}
+.main-body{
+    overflow-x: hidden;
 }
 
 .main-content {
@@ -137,7 +139,9 @@ body {
 
             }
 
-            & img {}
+            & img {
+            overflow: hidden;
+            }
         }
     }
 
@@ -485,7 +489,7 @@ body {
 }
 
 .mode {
-
+    position: relative;
     min-height: 750px;
     margin-bottom: 200px;
 
@@ -625,6 +629,7 @@ body {
 }
 
 .who {
+    position: relative;
     background-image: url("../img/bg.jpg");
 
     &__inner {
@@ -987,6 +992,7 @@ body {
 
 @media screen and(max-width: 715px) {
     .home {
+        min-height: 100%;
 
         &__inner {
             display: flex;
@@ -1073,5 +1079,35 @@ body {
     .title-medium{
         font-size: 30px;
     }
+
+    .item-line{
+        width: 100%;
+        text-align: left;
+    }
     
+}
+
+
+@media screen and(max-width: 400px){
+    .home{
+
+        &__text{
+
+            &-title{
+                font-size: 24px;
+            }
+
+            &-subtitle{
+                font-size: 16px;
+            }
+        }
+
+        &__play{
+            left: 50%;
+        }
+    }
+
+    .title-medium{
+        font-size: 24px;
+    }
 }
